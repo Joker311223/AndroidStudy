@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application STKJ</string>
+    <string name="describe">describe</string>
+    <string name="button">点击</string>
+    <string name="item1">点我</string>
+    <string name="back">back</string>
+    <string name="exit">exit</string>
+    <string name="nothing">nothing</string>
+</resources>

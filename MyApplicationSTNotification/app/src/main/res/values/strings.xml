@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Application STNotification</string>
+    <string name="this_is_notification_layout">This is notification layout</string>
+</resources>
