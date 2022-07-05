@@ -6,7 +6,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.myapplicationstpicasso"
+        applicationId "com.example.myapplicationstrxjava"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -28,7 +28,8 @@ android {
 }
 
 dependencies {
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.7.2'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
