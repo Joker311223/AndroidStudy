@@ -11,6 +11,7 @@ import android.graphics.drawable.Drawable;
 
 import android.text.format.Time;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 
 import java.util.TimeZone;
@@ -46,6 +47,8 @@ public class AnalogClock extends View {
     //当发生尺寸变化时，我们在绘制自己
     //时要进行适当的缩放。
     private boolean mChanged;
+    private float mLastX;
+    private float mLastY;
 
     //第一个构造方法
     public AnalogClock(Context context) {
@@ -135,6 +138,7 @@ public class AnalogClock extends View {
         mChanged = true;
     }
 
+
     private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -161,7 +165,7 @@ public class AnalogClock extends View {
             filter.addAction(Intent.ACTION_TIME_TICK);
             filter.addAction(Intent.ACTION_TIME_CHANGED);
             filter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
-            getContext().registerReceiver(mIntentReceiver,   filter);
+            getContext().registerReceiver(mIntentReceiver, filter);
         }
 
         mCalendar = new Time();
